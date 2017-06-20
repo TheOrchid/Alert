@@ -2,6 +2,8 @@
 
 namespace Orchid\Alert;
 
+use Orchid\Alert\Contracts\SessionStoreInterface;
+
 class Alert
 {
     /**

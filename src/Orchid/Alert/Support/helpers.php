@@ -1,7 +1,6 @@
 <?php
 
 if (!function_exists('alert')) {
-
     /**
      * Arrange for a flash message.
      *
@@ -10,7 +9,7 @@ if (!function_exists('alert')) {
      *
      * @return \Orchid\Alert\Alert
      */
-    function alert(string $message = null, string $level = 'info') : \Orchid\Alert\Alert
+    function alert(string $message = null, string $level = 'info')
     {
         $notifier = app('alert');
 

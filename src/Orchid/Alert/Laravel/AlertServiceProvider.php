@@ -1,8 +1,10 @@
 <?php
 
-namespace Orchid\Alert;
+namespace Orchid\Alert\Laravel;
 
 use Illuminate\Support\ServiceProvider;
+use Orchid\Alert\Alert;
+use Orchid\Alert\Contracts\SessionStoreInterface;
 
 class AlertServiceProvider extends ServiceProvider
 {
@@ -24,7 +26,7 @@ class AlertServiceProvider extends ServiceProvider
         );
 
         $this->app->singleton('alert', function () {
-            return new Alert(session());
+            return $this->app->make(Alert::class);
         });
     }
 

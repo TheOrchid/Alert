@@ -1,8 +1,9 @@
 <?php
 
-namespace Orchid\Alert;
+namespace Orchid\Alert\Laravel;
 
 use Illuminate\Session\Store;
+use Orchid\Alert\Contracts\SessionStoreInterface;
 
 class LaravelSessionStore implements SessionStoreInterface
 {

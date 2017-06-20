@@ -1,0 +1,52 @@
+{
+  "name": "orchid/alert",
+  "description": "Alerts allows you to easily pass alerts to your views.",
+  "keywords": [
+    "framework",
+    "laravel",
+    "orchid",
+    "laravel",
+    "messages",
+    "flash",
+    "alerts"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "homepage": "https://theorchid.github.io/",
+  "support": {
+    "issues": "https://github.com/theOrchid/Platform/issues",
+    "source": "https://github.com/theOrchid/Platform"
+  },
+  "authors": [
+    {
+      "name": "Alexandr Chernyaev",
+      "email": "bliz48rus@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0"
+  },
+  "autoload": {
+    "files": [
+      "src/helpers.php"
+    ],
+    "psr-4": {
+      "Orchid\\Alert\\": "src/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    },
+    "laravel": {
+      "providers": [
+        "Orchid\\Alert\\AlertServiceProvider"
+      ],
+      "aliases": {
+        "Alert": "Orchid\\Alert\\Facades\\Alert"
+      }
+    }
+  },
+  "minimum-stability": "alpha",
+  "prefer-stable": true
+}

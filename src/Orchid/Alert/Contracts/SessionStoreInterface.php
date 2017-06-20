@@ -1,6 +1,6 @@
 <?php
 
-namespace Orchid\Alert;
+namespace Orchid\Alert\Contracts;
 
 interface SessionStoreInterface
 {

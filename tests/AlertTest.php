@@ -11,7 +11,7 @@ class AlertTest extends TestCase
 
     public function setUp()
     {
-        $this->store =  Mockery::mock(SessionStoreInterface::class);
+        $this->store = Mockery::mock(SessionStoreInterface::class);
         $this->alert = new Alert($this->store);
     }
 

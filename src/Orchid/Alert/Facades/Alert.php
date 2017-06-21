@@ -3,8 +3,13 @@
 namespace Orchid\Alert\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Orchid\Alert\Alert as AlertModel;
 
+/**
+ * Class Alert
+ *
+ * @category PHP
+ * @package Orchid\Alert\Facades
+ */
 class Alert extends Facade
 {
     /**
@@ -12,6 +17,6 @@ class Alert extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return AlertModel::class;
+        return 'alert';
     }
 }

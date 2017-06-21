@@ -11,39 +11,59 @@ class AlertTest extends TestCase
 
     public function setUp()
     {
-        $this->store = Mockery::mock(SessionStoreInterface::class);
+        $this->store = $this->createMock(SessionStoreInterface::class);
         $this->alert = new Alert($this->store);
     }
 
     /** @test */
     public function it_should_flash_an_info_alert_to_the_session()
     {
-        $this->store->shouldReceive('flash')->with('flash_notification.message', 'test');
-        $this->store->shouldReceive('flash')->with('flash_notification.level', 'info');
+        $this->store->expects($this->exactly(2))
+            ->method('flash')
+            ->withConsecutive(
+                [$this->equalTo('flash_notification.message'), $this->equalTo('test')],
+                [$this->equalTo('flash_notification.level'), $this->equalTo('info')]
+            );
+
         $this->alert->info('test');
     }
 
     /** @test */
     public function it_should_flash_a_success_alert_to_the_session()
     {
-        $this->store->shouldReceive('flash')->with('flash_notification.message', 'test');
-        $this->store->shouldReceive('flash')->with('flash_notification.level', 'success');
+        $this->store->expects($this->exactly(2))
+            ->method('flash')
+            ->withConsecutive(
+                [$this->equalTo('flash_notification.message'), $this->equalTo('test')],
+                [$this->equalTo('flash_notification.level'), $this->equalTo('success')]
+            );
+
         $this->alert->success('test');
     }
 
     /** @test */
     public function it_should_flash_a_error_alert_to_the_session()
     {
-        $this->store->shouldReceive('flash')->with('flash_notification.message', 'test');
-        $this->store->shouldReceive('flash')->with('flash_notification.level', 'danger');
+        $this->store->expects($this->exactly(2))
+            ->method('flash')
+            ->withConsecutive(
+                [$this->equalTo('flash_notification.message'), $this->equalTo('test')],
+                [$this->equalTo('flash_notification.level'), $this->equalTo('danger')]
+            );
+
         $this->alert->error('test');
     }
 
     /** @test */
     public function it_should_flash_a_warning_alert_to_the_session()
     {
-        $this->store->shouldReceive('flash')->with('flash_notification.message', 'test');
-        $this->store->shouldReceive('flash')->with('flash_notification.level', 'warning');
+        $this->store->expects($this->exactly(2))
+            ->method('flash')
+            ->withConsecutive(
+                [$this->equalTo('flash_notification.message'), $this->equalTo('test')],
+                [$this->equalTo('flash_notification.level'), $this->equalTo('warning')]
+            );
+
         $this->alert->warning('test');
     }
 }

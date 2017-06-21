@@ -2,7 +2,7 @@
 
 if (!function_exists('alert')) {
     /**
-     * Arrange for a flash message.
+     * Helper function to send an alert.
      *
      * @param string|null $message
      * @param string      $level

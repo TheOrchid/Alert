@@ -5,6 +5,12 @@ namespace Orchid\Alert\Laravel;
 use Illuminate\Session\Store;
 use Orchid\Alert\Contracts\SessionStoreInterface;
 
+/**
+ * Class LaravelSessionStore
+ *
+ * @category PHP
+ * @package Orchid\Alert\Laravel
+ */
 class LaravelSessionStore implements SessionStoreInterface
 {
     /**

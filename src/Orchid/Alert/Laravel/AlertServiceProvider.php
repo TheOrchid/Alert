@@ -7,10 +7,9 @@ use Orchid\Alert\Alert;
 use Orchid\Alert\Contracts\SessionStoreInterface;
 
 /**
- * Class AlertServiceProvider
+ * Class AlertServiceProvider.
  *
  * @category PHP
- * @package Orchid\Alert\Laravel
  */
 class AlertServiceProvider extends ServiceProvider
 {

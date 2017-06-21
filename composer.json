@@ -21,10 +21,10 @@
     ],
     "autoload": {
         "files": [
-            "src/Orchid/Alert/Support/helpers.php"
+            "src/Alert/Support/helpers.php"
         ],
         "psr-4": {
-            "Orchid\\": "src/Orchid"
+            "Orchid\\": "src/"
         }
     },
     "require": {

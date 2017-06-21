@@ -13,17 +13,14 @@ class AlertServiceProvider extends ServiceProvider
      *
      * @var bool
      */
-    protected $defer = false;
+    protected $defer = true;
 
     /**
      * Register the service provider.
      */
     public function register()
     {
-        $this->app->bind(
-            SessionStoreInterface::class,
-            LaravelSessionStore::class
-        );
+        $this->app->bind(SessionStoreInterface::class, LaravelSessionStore::class);
 
         $this->app->singleton('alert', function () {
             return $this->app->make(Alert::class);
@@ -35,5 +32,6 @@ class AlertServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        //
     }
 }

@@ -9,7 +9,7 @@ if (!function_exists('alert')) {
      *
      * @return \Orchid\Alert\Alert
      */
-    function alert(string $message = null, string $level = 'info')
+    function alert($message = null, $level = 'info')
     {
         $notifier = app('alert');
 

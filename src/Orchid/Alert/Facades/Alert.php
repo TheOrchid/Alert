@@ -5,10 +5,9 @@ namespace Orchid\Alert\Facades;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * Class Alert
+ * Class Alert.
  *
  * @category PHP
- * @package Orchid\Alert\Facades
  */
 class Alert extends Facade
 {

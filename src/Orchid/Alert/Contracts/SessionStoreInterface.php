@@ -3,10 +3,9 @@
 namespace Orchid\Alert\Contracts;
 
 /**
- * Interface SessionStoreInterface
+ * Interface SessionStoreInterface.
  *
  * @category PHP
- * @package Orchid\Alert\Contracts
  */
 interface SessionStoreInterface
 {

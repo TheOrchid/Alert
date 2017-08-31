@@ -30,7 +30,7 @@
             "src/Orchid/Alert/Support/helpers.php"
         ],
         "psr-4": {
-            "Orchid\\Alert\\": "src/Orchid"
+            "Orchid\\": "src/Orchid"
         }
     },
     "extra": {
